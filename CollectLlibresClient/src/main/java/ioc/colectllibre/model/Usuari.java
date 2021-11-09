@@ -12,17 +12,18 @@ public class Usuari {
     private String telefon;
     private String nomUsuari;
     private String contrasenya;
+    private boolean admin;
     
     public Usuari(){}
     
-    public Usuari(int id, String nom, String cognoms, String dni, String telefon, String nomUsuari, String contrasenya) {
-	this.id = id;
+    public Usuari(String nom, String cognoms, String dni, String telefon, String nomUsuari, String contrasenya) {
 	this.nom = nom;
 	this.cognoms = cognoms;
 	this.dni = dni;
 	this.telefon = telefon;
 	this.nomUsuari = nomUsuari;
 	this.contrasenya = contrasenya;
+	admin=false;
     }
 
     public int getId() {
@@ -79,5 +80,20 @@ public class Usuari {
 
     public void setContrasenya(String contrasenya) {
 	this.contrasenya = contrasenya;
+    }
+
+    public boolean isAdmin() {
+	return admin;
+    }
+
+    public void setAdmin(boolean admin) {
+	this.admin = admin;
+    }
+    
+    public String getAdmin() {
+	if (admin)
+	    return "admin";
+	else
+	    return "user";
     }
 }

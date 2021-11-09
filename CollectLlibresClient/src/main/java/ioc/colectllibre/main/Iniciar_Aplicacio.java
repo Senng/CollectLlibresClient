@@ -1,6 +1,6 @@
 package ioc.colectllibre.main;
 
-import ioc.colectllibre.layout.LoginForm;
+import ioc.colectllibre.layout.Frame_login;
 
 /**
  * @author Rubén
@@ -12,7 +12,7 @@ public class Iniciar_Aplicacio {
 	
 	java.awt.EventQueue.invokeLater(new Runnable() {
 	    public void run() {
-		new LoginForm().setVisible(true);
+		new Frame_login().setVisible(true);
 	    }
 	});
     }
